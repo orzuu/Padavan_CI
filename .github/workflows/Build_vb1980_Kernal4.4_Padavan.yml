@@ -7,32 +7,9 @@ on:
         type: choice
         description: 'target to compile'
         options:
-        - ZTE-E8820S
-        - MSG1500
-        - BELL-A040WQ
-        - B70
-        - K2P
-        - R2100
-        - RM2100
-        - K2P-USB
-        - CR660x
-        - JCG-Q20
-        - JCG-AC860M
-        - JCG-AC876M
-        - JCG-Y2
         - DIR-878
-        - DIR-882
-        - MR2600
-        - MI-R3P
-        - MI-R3G
-        - MI-R3G-PB
-        - MI-4
-        - RT-AC85P
-        - WR1200JS
-        - NEWIFI
         - XY-C1
-        - GHL
-        default: ZTE-E8820S
+        default: XY-C1
       branch:
         type: choice
         description: 'branch to compile'
@@ -43,15 +20,15 @@ on:
       plugins:
         description: 'json format string of include configs'
         required: true
-        default: '{"vpnsvr":"n","vpncli":"n","vpncmd":"n","ss":"y","v2ray":"n","xray":"y","trojan":"y","ssobfs":"y","dnsforwarder":"n","adbyby":"n","adguardhome":"n","smartdns":"n","aliddns":"n","zerotier":"n","ddnsto":"n","wireguard":"n","frpc":"y","aldriver":"n","sqm":"y","mentohust":"n","scutclient":"n","njitclient":"n","minieap":"n","dogcom":"n"}'
+        default: '{"vpnsvr":"n","vpncli":"n","vpncmd":"n","ss":"y","v2ray":"y","xray":"y","trojan":"y","ssobfs":"y","dnsforwarder":"n","adbyby":"y","adguardhome":"n","smartdns":"y","aliddns":"y","zerotier":"n","ddnsto":"n","wireguard":"n","frpc":"y","aldriver":"n","sqm":"y","mentohust":"n","scutclient":"n","njitclient":"n","minieap":"n","dogcom":"n"}'
       rainbowui:
         type: boolean
         description: 'whether to apply rainbow ui'
-        default: 'true'
+        default: 'false'
       specializedlogo:
         type: boolean
         description: 'whether to apply specialized logo for e8820s or a-040w-q'
-        default: 'true'
+        default: 'false'
       changebrandlogo:
         type: boolean
         description: 'change brand logo image for specialized router'
