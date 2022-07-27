@@ -211,7 +211,7 @@ jobs:
         mkdir -p $FIRMWARE_PATH/
         cd $WORK_PATH/trunk/images
         for firmwarefile in $(ls *.trx)
-        do sudo mv $firmwarefile $FIRMWARE_PATH/${FIRMWARE_DATEPREFIX}"_"${FIRMWARE_AUTHOR}"_"${{ github.event.inputs.target }}"_kernal3.4.trx"
+        do sudo mv $firmwarefile $FIRMWARE_PATH/${FIRMWARE_DATEPREFIX}"_"${{ github.event.inputs.target }}"_kernal3.4.trx"
         done
         cd $FIRMWARE_PATH
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
@@ -220,7 +220,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success'
       with:
-        name: Padavan-packages
+        name: Padavan-${{ github.event.inputs.target }}-packages
         path: ${{ env.FIRMWARE }}
     - name: Upload firmware to WeTransfer
       if: steps.organize.outputs.status == 'success' && github.event.inputs.uploadwet == 'true'
