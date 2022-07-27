@@ -19,7 +19,7 @@ on:
         options:
         - 1.24.x
         - 1.34.1
-        default: '1.34.x'
+        default: '1.34.1'
       ssp:
         type: boolean
         description: 'whether to apply the patch for download ssp bin from local or remote url'
@@ -37,7 +37,6 @@ env:
   TOOLCHAIN_URL: https://github.com/hanwckf/padavan-toolchain/releases/download/v1.1/mipsel-linux-uclibc.tar.xz
   WORK_PATH: /opt/rt-n56u
   TIME_ZONE: Asia/Shanghai
-  TARGET_NAME: XY-C1
   FIRMWARE_DATEPREFIX: $(date +"%Y%m%d")
   FIRMWARE_AUTHOR: vb1980
   FIRMWARE_PATH: /opt/firmwares
