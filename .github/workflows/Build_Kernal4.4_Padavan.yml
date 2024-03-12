@@ -43,7 +43,7 @@ on:
 env:
   REPOSITORY_URL: https://github.com/tsl0922/padavan.git
   TOOLCHAIN_URL: https://github.com/hanwckf/padavan-toolchain/releases/download/linux-4.4-v1.0/mipsel-linux-uclibc.tar.xz
-  WORK_PATH: /opt/padavan-4.4
+  WORK_PATH: /opt/padavan
   TIME_ZONE: Asia/Shanghai
   FIRMWARE_DATEPREFIX: $(date +"%Y%m%d")
   FIRMWARE_AUTHOR: none
