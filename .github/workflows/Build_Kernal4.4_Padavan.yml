@@ -69,7 +69,7 @@ jobs:
     - name: Clone source code
       run: |
         git clone -b ${{ github.event.inputs.branch }} --depth=1 $REPOSITORY_URL $WORK_PATH
-        cd $WORK_PATH/toolchain-mipsel
+        cd $WORK_PATH/toolchain
         mkdir -p toolchain-4.4.x
         wget $TOOLCHAIN_URL
         tar -xf mipsel-linux-uclibc.tar.xz -C toolchain-4.4.x
